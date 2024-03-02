@@ -14,5 +14,14 @@ namespace Examination_wf
         public string Descrption { get; set;}
         public int Mark { get; set;}
         public string Model_answer { get; set; }
+
+        public virtual StudentAnswer StudentAnswer { get; set; }
+
+        public int CourseId { get; set; }
+        public virtual Course Course { get; set; }
+
+
+        public int InstructorId { get; set; }
+        public virtual Instructor Instructor { get; set; }
     }
 }

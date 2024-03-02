@@ -15,5 +15,7 @@ namespace Examination_wf
         public string userName { get; set; }
         [Required]
         public string Password { get; set; }
+
+        public virtual ICollection<Question> Questions { get; set; } = new List<Question>();
     }
 }

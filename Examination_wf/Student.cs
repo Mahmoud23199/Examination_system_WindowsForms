@@ -24,5 +24,9 @@ namespace Examination_wf
 
         public string Address { get; set; }
 
+        public virtual ICollection<StudentCourse> StudentCourses { get; set; } = new List<StudentCourse>();
+        public virtual ICollection<StudentAnswer> StudentAnswers { get; set; } = new List<StudentAnswer>();
+
+
     }
 }
