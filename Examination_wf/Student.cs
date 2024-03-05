@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -26,6 +27,9 @@ namespace Examination_wf
 
         public virtual ICollection<StudentCourse> StudentCourses { get; set; } = new List<StudentCourse>();
         public virtual ICollection<StudentAnswer> StudentAnswers { get; set; } = new List<StudentAnswer>();
+
+        public virtual ICollection<ExamHistory> ExamHistories { get; set; } = new List<ExamHistory>();
+
 
 
     }

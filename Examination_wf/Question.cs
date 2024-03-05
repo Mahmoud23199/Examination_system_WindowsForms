@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace Examination_wf
 {
     internal class Question
     {
+        [Key]
         public int Question_id { get; set; }
 
         public string Question_type { get; set;}
@@ -23,5 +25,7 @@ namespace Examination_wf
 
         public int InstructorId { get; set; }
         public virtual Instructor Instructor { get; set; }
+
+
     }
 }

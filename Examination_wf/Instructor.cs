@@ -9,6 +9,7 @@ namespace Examination_wf
 {
     internal class Instructor
     {
+        [Key]
         public int Instructor_id { get; set; }
 
         [Required]
