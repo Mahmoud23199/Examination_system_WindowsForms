@@ -19,6 +19,12 @@ Question (1-to-1) StudentAnswer: Each question has one corresponding student ans
 Instructor (1-to-M) Question: An instructor can create multiple questions. 
 Student (1-to-M) StudentHistory: This relationship indicates that each student can have multiple entries in their history. 
 course(1-to-M) StudentHistory: that each course can have multiple entries in the student history.
+https://github.com/Mahmoud23199/Examination_system_WindowsForms/blob/Migration/Schema.png
+- ![Alt text](https://github.com/Mahmoud23199/Examination_system_WindowsForms/blob/Migration/Schema.png)
+
+- ![Alt text](https://github.com/Mahmoud23199/Examination_system_WindowsForms/blob/Migration/Mapping.jpeg)
+- 
+
 
 
 
