@@ -34,17 +34,23 @@ namespace Examination_wf
             button1.Font = new Font("Arial", 12, FontStyle.Bold); // Set font and size
             button1.FlatStyle = FlatStyle.Flat; // Set flat style
             button1.FlatAppearance.BorderSize = 0;
+
+            button2.BackColor = Color.FromArgb(52, 152, 219); // Set background color
+            button2.ForeColor = Color.White; // Set text color
+            button2.Font = new Font("Arial", 12, FontStyle.Bold); // Set font and size
+            button2.FlatStyle = FlatStyle.Flat; // Set flat style
+            button2.FlatAppearance.BorderSize = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ExamDbContext examDb = new ExamDbContext();
             var user = userAdmin.Text;
-            var password=passwordAdmin.Text;
+            var password = passwordAdmin.Text;
 
             var valid = examDb.Instructors.FirstOrDefault(i => i.userName == user && i.Password == password);
 
-            if (valid != null) 
+            if (valid != null)
             {
                 AddQuestion addQuestion = new AddQuestion();
                 addQuestion.Show();
@@ -54,10 +60,16 @@ namespace Examination_wf
             {
                 MessageBox.Show("Invalid username or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                userAdmin.Clear();
                 passwordAdmin.Clear();
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
         }
     }
 }

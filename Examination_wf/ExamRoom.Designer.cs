@@ -38,6 +38,7 @@
             label3 = new Label();
             comboBox1 = new ComboBox();
             btnStart = new Button();
+            btnLog = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -140,12 +141,23 @@
             btnStart.UseVisualStyleBackColor = true;
             btnStart.Click += btnStart_Click;
             // 
+            // btnLog
+            // 
+            btnLog.Location = new Point(479, 481);
+            btnLog.Name = "btnLog";
+            btnLog.Size = new Size(94, 29);
+            btnLog.TabIndex = 22;
+            btnLog.Text = "Logout";
+            btnLog.UseVisualStyleBackColor = true;
+            btnLog.Click += btnLog_Click;
+            // 
             // ExamRoom
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(972, 533);
+            Controls.Add(btnLog);
             Controls.Add(btnStart);
             Controls.Add(comboBox1);
             Controls.Add(label3);
@@ -175,5 +187,6 @@
         private Label label3;
         private ComboBox comboBox1;
         private Button btnStart;
+        private Button btnLog;
     }
 }

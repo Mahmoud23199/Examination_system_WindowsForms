@@ -36,6 +36,7 @@
             label2 = new Label();
             label3 = new Label();
             pictureBox1 = new PictureBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -111,12 +112,25 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.ButtonFace;
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(731, 12);
+            button2.Name = "button2";
+            button2.Size = new Size(113, 40);
+            button2.TabIndex = 7;
+            button2.Text = "Home";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(856, 526);
+            Controls.Add(button2);
             Controls.Add(pictureBox1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -142,5 +156,6 @@
         private Label label2;
         private Label label3;
         private PictureBox pictureBox1;
+        private Button button2;
     }
 }

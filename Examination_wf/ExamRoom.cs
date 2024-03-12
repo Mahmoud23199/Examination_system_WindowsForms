@@ -62,6 +62,12 @@ namespace Examination_wf
             btnStart.FlatStyle = FlatStyle.Flat; // Set flat style
             btnStart.FlatAppearance.BorderSize = 0;
 
+            btnLog.BackColor = Color.FromArgb(52, 152, 219); // Set background color
+            btnLog.ForeColor = Color.White; // Set text color
+            btnLog.Font = new Font("Arial", 12, FontStyle.Bold); // Set font and size
+            btnLog.FlatStyle = FlatStyle.Flat; // Set flat style
+            btnLog.FlatAppearance.BorderSize = 0;
+
 
 
         }
@@ -79,6 +85,13 @@ namespace Examination_wf
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
         }
     }
 }

@@ -30,6 +30,7 @@ namespace Examination_wf
             var modelAnswers = examDb.Questions
                             .Where(i => i.CourseId == courId && i.Question_type == "Choose")
                             .Select(i => i.Model_answer)
+                            .Take(8)
                             .ToList();
 
             List<string> stdAnswers = new List<string>();
@@ -59,24 +60,30 @@ namespace Examination_wf
                     }
 
                 }
+                //----------save mark in db--------------------------
+
+                var Ename = examDb.Courses.Where(i => i.Crs_id == courId).Select(i => i.Name).FirstOrDefault();
+
+                var examtory = new ExamHistory
+                {
+                    ExamName = Ename,
+                    CourseId = courId,
+                    StudentId = userId,
+                    TotalMark = totalMark
+                };
+
+
+                examDb.ExamHistorys.Add(examtory);
+                examDb.SaveChanges();
+
+                //-----------------------------------------------------
+                EndExam endExam = new EndExam(totalMark, userId);
+                endExam.Show();
+                this.Hide();
 
             }
 
-            //----------save mark in db--------------------------
-
-            var Ename = examDb.Courses.Where(i => i.Crs_id == courId).Select(i=>i.Name).FirstOrDefault();
-
-            var examtory = new ExamHistory { ExamName = Ename, CourseId = courId,
-                StudentId = userId, TotalMark = totalMark };
-
-
-            examDb.ExamHistorys.Add(examtory);
-            examDb.SaveChanges();
-
-            //-----------------------------------------------------
-             EndExam endExam = new EndExam(totalMark,userId);
-             endExam.Show();
-             this.Hide();
+          
         }
 
         private void SecondPageQ_Load(object sender, EventArgs e)
@@ -87,10 +94,10 @@ namespace Examination_wf
                 .Where(i => i.CourseId == courId && i.Question_type == "Choose")
                 .Select(i => new { Q = i.Descrption })
                 .AsEnumerable()
-                .OrderBy(_ => random.Next())
                 .Take(8)
+                .OrderBy(_ => random.Next())
                 .ToList();
-
+            //-updated 
             //var listQuestion = examDb.Questions.Where(i => i.CourseId == courId && i.Question_type== "Choose").Select(i => new { Q = i.Descrption }).ToList();
 
 

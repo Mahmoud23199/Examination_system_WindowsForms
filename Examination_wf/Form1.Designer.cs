@@ -59,6 +59,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.ButtonHighlight;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(305, 301);
             label1.Name = "label1";
@@ -70,6 +71,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = SystemColors.ButtonHighlight;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(305, 359);
             label2.Name = "label2";
@@ -137,6 +139,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(969, 563);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
@@ -149,7 +153,7 @@
             Controls.Add(userNameStd);
             ForeColor = SystemColors.ActiveCaptionText;
             Name = "Form1";
-            Text = "Form1";
+            Text = "d";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
