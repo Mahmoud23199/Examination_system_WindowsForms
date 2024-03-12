@@ -7,6 +7,9 @@ Sign in as student/ instructor
 - choose the correct answer and True-False from the combobox beside each question (if student has passed on submit button, the exam is submitted and grade reviewed in table with all exam that student take)
 - press submit to get redirected to the grade page
 - you can then choose to log out or go to your profile (if went back to profile you wouldn't find the exam that has just finished in the exam list)
+
+- 
+- ![Alt text](https://github.com/Mahmoud23199/Examination_system_WindowsForms/blob/Migration/UpdateERD.png)
   
 Student (M-to-M) Course: This relationship indicates that a student can enroll in multiple courses, and a course can have multiple students. 
 Student (1-to-M) StudentAnswer: Each student can have multiple answers to different questions. 
